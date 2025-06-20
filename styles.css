@@ -1,0 +1,306 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Splash Screen */
+#splash-screen {
+    background: linear-gradient(to bottom, #A7C7E7, #4A90E2);
+    justify-content: center;
+}
+
+.logo {
+    text-align: center;
+}
+
+.s-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #4A90E2;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+#splash-screen h1 {
+    color: #FFFFFF;
+    font-size: 32px;
+    margin: 0;
+}
+
+#splash-screen p {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+/* Login Screen */
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #D3D3D3;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+}
+
+.login-button:hover {
+    opacity: 0.9;
+}
+
+.forgot-password {
+    color: #93C5FD;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #E8E8E8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+}
+
+/* Balance Screen */
+.balance, .transaction, .feedback, .goal {
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.amount {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.save-more {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    flex: 1;
+}
+
+.get-cash {
+    background-color: #FFFFFF;
+    color: #4A90E2;
+    border: 1px solid #4A90E2;
+    flex: 1;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #FFFFFF;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #A9A9A9;
+    padding: 5px 10px;
+}
+
+.tab.active {
+    color: #4A90E2;
+    font-weight: bold;
+    position: relative;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #4A90E2;
+}
+
+/* Round Up Screen */
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.toggle input {
+    width: 20px;
+    height: 20px;
+}
+
+.continue {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+/* Transaction Feedback Screen */
+.back {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+}
+
+.feedback h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.savings h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.back-to-dashboard {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+/* Set Goals Screen */
+.close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+}
+
+#set-goal-form label {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.set-goal {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Savings Goals Screen */
+.goal h2 {
+    font-size: 20px;
+}
+
+progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #D3D3D3;
+    border: none;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4A90E2;
+    border-radius: 5px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #4A90E2;
+    border-radius: 5px;
+}
+
+.set-new-goal {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SavUp - Micro-Saving App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <section id="splash-screen" class="screen">
+        <div class="logo">
+            <div class="s-icon">S</div>
+            <h1>SavUp</h1>
+            <p>SAVE small, Mek Big Tamura</p>
+        </div>
+    </section>
+
+    <!-- Login Screen -->
+    <section id="login-screen" class="screen hidden">
+        <header>
+            <h1>SavUp</h1>
+        </header>
+        <form id="login-form">
+            <input type="text" placeholder="Email/Phone" aria-label="Email or Phone">
+            <input type="password" placeholder="PIN/Password" aria-label="PIN or Password">
+            <a href="#" class="forgot-password">Forgot PIN/Password?</a>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <div class="social-login">
+            <button class="social-icon">G</button>
+            <button class="social-icon">F</button>
+            <button class="social-icon">A</button>
+        </div>
+    </section>
+
+    <!-- Account Balance Screen -->
+    <section id="balance-screen" class="screen hidden">
+        <header>
+            <h1>SavUp Savings App</h1>
+        </header>
+        <div class="balance">
+            <h2>Balance</h2>
+            <p class="amount">LE 1,650.00</p>
+            <div class="details">
+                <p>Savings Balance: LE 1,200.00</p>
+                <p>Last Transaction: LE 50.00</p>
+                <p>Unsaved Cash: LE 400.00</p>
+            </div>
+        </div>
+        <div class="actions">
+            <button class="save-more">Save More</button>
+            <button class="get-cash">Get Cash</button>
+        </div>
+        <nav class="tabs">
+            <button class="tab active" data-tab="balance">Home</button>
+            <button class="tab" data-tab="round-up">Round Up</button>
+            <button class="tab" data-tab="transaction-feedback">Transactions</button>
+            <button class="tab" data-tab="set-goals">Goals</button>
+            <button class="tab" data-tab="savings-goals">Savings</button>
+        </nav>
+    </section>
+
+    <!-- Round Up Screen -->
+    <section id="round-up-screen" class="screen hidden">
+        <header>
+            <h1>Round Up</h1>
+        </header>
+        <div class="transaction">
+            <p>Transaction Amount: LE 2.50</p>
+            <p>Merchant Category: Coffee</p>
+            <label class="toggle">
+                <input type="checkbox" id="round-up-toggle">
+                <span>Round Up</span>
+            </label>
+        </div>
+        <button class="continue">Confirm Transaction</button>
+        <nav class="tabs">
+            <button class="tab" data-tab="balance">Home</button>
+            <button class="tab active" data-tab="round-up">Round Up</button>
+            <button class="tab" data-tab="transaction-feedback">Transactions</button>
+            <button class="tab" data-tab="set-goals">Goals</button>
+            <button class="tab" data-tab="savings-goals">Savings</button>
+        </nav>
+    </section>
+
+    <!-- Transaction Feedback Screen -->
+    <section id="transaction-feedback-screen" class="screen hidden">
+        <header>
+            <button class="back">←</button>
+            <h1>Transaction Feedback</h1>
+        </header>
+        <div class="feedback">
+            <h2>Transaction Processed</h2>
+            <p>Original Amount: LE 2.50</p>
+            <p>Rounded Amount: LE 3.00</p>
+            <div class="savings">
+                <h3>Savings</h3>
+                <p>Account: LE 0.50</p>
+                <p>Main: LE 2.50</p>
+            </div>
+            <button class="back-to-dashboard">Back to Dashboard</button>
+        </div>
+        <nav class="tabs">
+            <button class="tab" data-tab="balance">Home</button>
+            <button class="tab" data-tab="round-up">Round Up</button>
+            <button class="tab active" data-tab="transaction-feedback">Transactions</button>
+            <button class="tab" data-tab="set-goals">Goals</button>
+            <button class="tab" data-tab="savings-goals">Savings</button>
+        </nav>
+    </section>
+
+    <!-- Set Goals Screen -->
+    <section id="set-goals-screen" class="screen hidden">
+        <header>
+            <button class="back">←</button>
+            <h1>Set Goal</h1>
+            <button class="close">×</button>
+        </header>
+        <form id="set-goal-form">
+            <label for="goal-amount">Goal Amount</label>
+            <input type="text" id="goal-amount" placeholder="e.g. $300">
+            <label for="deadline">Deadline</label>
+            <input type="text" id="deadline" placeholder="e.g. 1 month">
+            <button type="submit" class="set-goal">Set Goal</button>
+        </form>
+        <nav class="tabs">
+            <button class="tab" data-tab="balance">Home</button>
+            <button class="tab" data-tab="round-up">Round Up</button>
+            <button class="tab" data-tab="transaction-feedback">Transactions</button>
+            <button class="tab active" data-tab="set-goals">Goals</button>
+            <button class="tab" data-tab="savings-goals">Savings</button>
+        </nav>
+    </section>
+
+    <!-- Savings Goals Screen -->
+    <section id="savings-goals-screen" class="screen hidden">
+        <header>
+            <h1>Savings Goals</h1>
+        </header>
+        <div class="goal">
+            <h2>Goal: LE 500 by 07/19/25</h2>
+            <p>40% Completed</p>
+            <progress value="40" max="100"></progress>
+            <p>Saved: LE 200</p>
+            <button class="set-new-goal">Set New Goal</button>
+        </div>
+        <nav class="tabs">
+            <button class="tab" data-tab="balance">Home</button>
+            <button class="tab" data-tab="round-up">Round Up</button>
+            <button class="tab" data-tab="transaction-feedback">Transactions</button>
+            <button class="tab" data-tab="set-goals">Goals</button>
+            <button class="tab active" data-tab="savings-goals">Savings</button>
+        </nav>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
